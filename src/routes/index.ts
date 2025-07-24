@@ -1,7 +1,9 @@
 import { response_not_found, response_success } from "$utils/response.utils";
 import { Request, Response, Router } from "express";
-import RoutesRegistry from "./registry";
-
+// import RoutesRegistry from "./RoutesRegistry";
+// import { Application } from "express";
+import routes from "./RoutesRegistry";
+import fileRoutes from "./fileRoute";
 
 const router = Router();
 
@@ -19,8 +21,13 @@ router.get("/ping", (req: Request, res: Response) => {
 });
 
 
-router.use("/example", RoutesRegistry.ExampleRoutes)
+//router.use("/example", RoutesRegistry.ExampleRoutes)
 
+for (const route of routes) {
+  router.use("/api", route);
+}
+
+router.use("/api", fileRoutes);
 
 router.all("*", (req: Request, res: Response) => {
   return response_not_found(res);

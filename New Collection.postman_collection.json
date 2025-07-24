@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "f4cefda8-e406-45d0-855e-9bdaf0e5e960",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47020660",
+		"_collection_link": "https://spacecraft-explorer-89403954-7513826.postman.co/workspace/KangNul's-Workspace~f552835c-caed-43d0-852b-b208283b9de4/collection/47020660-f4cefda8-e406-45d0-855e-9bdaf0e5e960?action=share&source=collection_link&creator=47020660"
+	},
+	"item": [
+		{
+			"name": "Register Request with JWT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test@mail.com\",\r\n  \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3150/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3150",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Request with JWT",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Excel File",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "RetrieveExcelFile",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Excel File based on File Name",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
